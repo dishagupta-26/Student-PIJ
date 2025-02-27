@@ -48,4 +48,11 @@ public class Student {
         this.marks = marks;
     }
 
+    // display method
+    public void displayStudentDetails() {
+        System.out.println("PRN: " + prn);
+        System.out.println("Name: " + name);
+        System.out.println("DOB: " + dob);
+        System.out.println("Marks: " + marks);
+    }
 }
