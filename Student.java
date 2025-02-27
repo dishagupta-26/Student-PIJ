@@ -2,7 +2,7 @@ import java.util.Date;
 
 public class Student {
     // declaring the instaance members
-    private int prn;
+    private long prn;
     private String name;
     private Date dob;
     private double marks;
@@ -16,11 +16,11 @@ public class Student {
     }
 
     // getters and setters
-    public int getPrn() {
+    public long getPrn() {
         return prn;
     }
 
-    public void setPrn(int prn) {
+    public void setPrn(long prn) {
         this.prn = prn;
     }
 
