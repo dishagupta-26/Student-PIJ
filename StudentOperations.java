@@ -22,4 +22,8 @@ public class StudentOperations {
         System.out.println("Enter Marks: ");
         double marks = sc.nextDouble();
 
+        students.add(new Student(prn, name, dob, marks));
+        System.out.println("Student added successfully!");
+        
+
 }
