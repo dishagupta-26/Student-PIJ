@@ -26,6 +26,32 @@ public class Main {
             choice = sc.nextInt();
             sc.nextLine();
 
+            // switch case to handle operations according to input
+            switch (choice) {
+                case 1:
+                    operations.addStudent(sc);
+                    break;
+                case 2:
+                    operations.displayStudents();
+                    break;
+                case 3:
+                    operations.searchStudentByPrn(sc);
+                    break;
+                case 4:
+                    operations.searchStudentByName(sc);
+                    break;
+                case 5:
+                    operations.updateStudent(sc);
+                    break;
+                case 6:
+                    operations.deleteStudent(sc);
+                    break;
+                case 7:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice! Try again.");
+            }
         } while (choice != 7);
         sc.close();
     }
