@@ -36,4 +36,18 @@ public class StudentOperations {
             student.displayStudentDetails();
         }
     }
+
+    // method to search student by PRN
+    public void searchStudentByPrn(Scanner sc) {
+        System.out.print("Enter PRN to search: ");
+        int prn = sc.nextInt();
+
+        for (Student student : students) {
+            if (student.getPrn() == prn) {
+                student.displayStudentDetails();
+                return;
+            }
+        }
+        System.out.println("Student with PRN " + prn + " not found.");
+    }
 }

@@ -8,7 +8,7 @@ public class Student {
     private double marks;
 
     // declaring constructors
-    public Student(int prn, String name, Date dob, double marks) {
+    public Student(long prn, String name, Date dob, double marks) {
         this.prn = prn;
         this.name = name;
         this.dob = dob;
