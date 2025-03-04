@@ -23,4 +23,4 @@ Before running the application, ensure you have the following installed:
 1. **Clone the Repository**: Download or clone the project repository to your local machine.
 
    ```bash
-   git clone https://github.com/your_username/student-management-system.git
+   git clone https://github.com/dishagupta-26/Student-PIJ.git
