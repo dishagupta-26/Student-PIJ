@@ -1,3 +1,5 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -12,18 +14,24 @@ public class StudentOperations {
 
     // method to add student
     public void addStudent(Scanner sc) {
-        System.out.println("Enter PRN: ");
-        long prn = sc.nextLong();
-        sc.nextLine();
-        System.out.println("Enter Name: ");
-        String name = sc.nextLine();
-        System.out.println("Enter DOB (yyyy-mm-dd): ");
-        String dob = sc.nextLine();
-        System.out.println("Enter Marks: ");
-        double marks = sc.nextDouble();
+        try {
+            System.out.println("Enter PRN: ");
+            long prn = sc.nextLong();
+            sc.nextLine();
+            System.out.println("Enter Name: ");
+            String name = sc.nextLine();
+            System.out.println("Enter DOB (yyyy-mm-dd): ");
+            String dobStr = sc.nextLine();
+            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+            Date dob = sdf.parse(dobStr); // parse the input string to a date object
+            System.out.println("Enter Marks: ");
+            double marks = sc.nextDouble();
 
-        students.add(new Student(prn, name, dob, marks));
-        System.out.println("Student added successfully!");
+            students.add(new Student(prn, name, dob, marks));
+            System.out.println("Student added successfully!");
+        } catch (ParseException e) {
+            System.out.println("Invalid date format! Please use dd-MM-yyyy.");
+        }
     }
 
     // method to display all students
@@ -79,8 +87,16 @@ public class StudentOperations {
 
                 System.out.print("Enter new Date of Birth (yyyy-mm-dd): ");
                 String dobStr = sc.nextLine();
-                Date dob = Date.valueOf(dobStr);
-                student.setDob(dob);
+                if (!dobStr.isEmpty()) {
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                    try {
+                        Date dob = sdf.parse(dobStr);
+                        student.setDob(dob);
+                    } catch (ParseException e) {
+                        System.out.println("Invalid date format! Please use dd-MM-yyyy.");
+                        return;
+                    }
+                }
 
                 System.out.print("Enter new Marks: ");
                 double marks = sc.nextDouble();

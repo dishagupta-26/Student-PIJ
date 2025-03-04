@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Student {
@@ -50,9 +51,10 @@ public class Student {
 
     // display method
     public void displayStudentDetails() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         System.out.println("PRN: " + prn);
         System.out.println("Name: " + name);
-        System.out.println("DOB: " + dob);
+        System.out.println("DOB: " + sdf.format(dob));
         System.out.println("Marks: " + marks);
     }
 }
