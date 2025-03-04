@@ -114,7 +114,7 @@ public class StudentOperations {
     // method to delete student
     public void deleteStudent(Scanner sc) {
         System.out.print("Enter PRN of student to delete: ");
-        int prn = sc.nextInt();
+        long prn = sc.nextLong();
 
         for (int i = 0; i < students.size(); i++) {
             if (students.get(i).getPrn() == prn) {
