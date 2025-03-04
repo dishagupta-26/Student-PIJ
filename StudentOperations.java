@@ -48,7 +48,7 @@ public class StudentOperations {
     // method to search student by PRN
     public void searchStudentByPrn(Scanner sc) {
         System.out.print("Enter PRN to search: ");
-        long prn = sc.nextInt();
+        long prn = sc.nextLong();
 
         for (Student student : students) {
             if (student.getPrn() == prn) {
