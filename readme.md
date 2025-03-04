@@ -1,6 +1,6 @@
 # Student Management System
 
-This project is a simple Student Management System implemented in Java. It allows users to perform various operations such as adding, viewing, updating, searching, and deleting student records. Each student record includes details like PRN (Permanent Registration Number), name, date of birth, and marks.
+This project is a simple Student Management System implemented in Java. It allows users to perform various operations such as adding, viewing, updating, searching, and deleting student records. Each student record includes details like PRN, name, date of birth, and marks.
 
 ## Features
 
