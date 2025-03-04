@@ -78,7 +78,7 @@ public class StudentOperations {
     // method to update student details
     public void updateStudent(Scanner sc) {
         System.out.print("Enter PRN of student to update: ");
-        int prn = sc.nextInt();
+        long prn = sc.nextLong();
         sc.nextLine();
 
         for (Student student : students) {
