@@ -52,6 +52,7 @@ public class StudentOperations {
 
         for (Student student : students) {
             if (student.getPrn() == prn) {
+                System.out.println("Student found:");
                 student.displayStudentDetails();
                 return;
             }
@@ -66,6 +67,7 @@ public class StudentOperations {
 
         for (Student student : students) {
             if (student.getName().equalsIgnoreCase(name)) {
+                System.out.println("Student found:");
                 student.displayStudentDetails();
                 return;
             }
